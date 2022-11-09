@@ -1,0 +1,10 @@
+l
+set history filename his.txt
+set history save on
+l
+start
+n
+n
+n
+n
+q
