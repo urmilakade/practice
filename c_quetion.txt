@@ -1,0 +1,77 @@
+1) What is volatile in C/C++?
+Volatile is a qualifier that is applied to a variable when it is declared. It tells the compiler that the value of the variable may change at any time-without any action being
+ taken by the code the compiler finds nearby. 
+ 
+ 2)When To Use Volatile in C/C++
+A variable should be declared volatile whenever its value could change unexpectedly. In practice, only three types of variables could change:
+    Memory-mapped peripheral registers
+    Global variables modified by an interrupt service routine
+    Global variables within a multi-threaded application
+
+3)what static ,why static using?
+	Static variables are the variables which once declared, get destroyed only when the program has completed its execution. They have the property of retaining their previous
+	scope value if they are already declared once in the program. They are different from normal variables because normal variables do not retain their previous value. 
+	Normal variables get destroyed once they go out of scope. But when static variables are initialized, they get destroyed only after the whole program gets executed.
+
+4)what is the use of function pointers?
+A pointer to a function points to the address of the executable code of the function. You can use pointers to call functions and to pass functions as arguments to other functions.
+Function pointers can be useful when you want to create callback mechanism, and need to pass address of a function to another function.
+
+5)what are data types?
+data types are declarations for variables. This determines the type and size of data associated with variables
+Floating-point, integer, double, character. Union, structure, array, etc. The basic data types are also known as the primary data types in C programming.
+
+6)integer value changing compiler to compiler? why?
+
+
+7)what is dynamic memory allocation?
+ The mechanism by which storage/memory/cells can be allocated to variables during the run time is called Dynamic Memory Allocation
+ 
+8)Why would we need to allocate memory while the program is executing? Because, even though it isn’t blatantly visible, not being able to allocate memory during run time precludes flexibility and compromises
+ with space efficiency. Specially, those cases where the input isn’t known beforehand,we suffer in terms of inefficient storage use and lack or excess of slots to enter data (given an array or similar data structures to store entries).
+ Example: If you have allocated memory space for a 1D array as array[20] and you end up using only 10 memory spaces then the remaining 10 memory spaces would be wasted and this wasted memory cannot even be 
+ utilized by other program variables.
+ 
+ 10)how to alloacte memory dynamically  and where?(with example)
+ ptr = (cast-type*) malloc(byte-size)
+For Example:
+
+    ptr = (int*) malloc(100 * sizeof(int));
+    Since the size of int is 4 bytes, this statement will allocate 400 bytes of memory. And, the pointer ptr holds the address of the first byte in the allocated memory.
+	
+11)allocate 100bytes dynamically in c
+	int *ptr = (int *) malloc( 25 * sizeof(int)); //100 bytes
+	
+12)what is the input for malloc?	
+	The malloc() function takes a single parameter, which is the size of the requested memory area in bytes. It returns a pointer to the allocated memory.
+	
+13)how to delloacate memory ?how you know dellocating memory?
+
+14)stm32 microcontroller?
+    Extern-if variable is declared globally then explicitely why we need to write extern before
+
+15)write program a find product, pass values, without using *(multiplication operator) ?
+    (a+b)2 = a2 + b2 + 2a*b
+     a*b = ((a+b)2 – a2 – b2) / 2
+	 
+16)What are the storage class?
+     
+Types of Storage Classes in C
+
+There are four different types of storage classes that we use in the C language:
+
+    Automatic Storage Class
+    External Storage Class
+    Static Storage Class
+    Register Storage Class
+
+Use of Storage Class in C
+
+A variable given in a C program will have two of the properties: storage class and type. Here, type refers to any given variable’s data type, while the storage class determines that very variable’s lifetime, visibility, and also its scope.
+
+Summary of Storage Classes in C
+Class 	   Name of Class 	Place of Storage 	Scope 	    Default Value 	         Lifetime
+auto  	   Automatic 	         RAM 	                Local 	    Garbage Value 	         Within a function
+extern 	    External 	        RAM 	                Global 	        Zero 	                Till the main program ends. One can declare it anywhere in a program.
+static 	    Static 	            RAM 	                 Local           Zero                     Till the main program ends. It retains the available value between various function calls.
+register 	Register 	      Register 	            Local         Garbage Value 	    Within the function
