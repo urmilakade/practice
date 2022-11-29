@@ -1,0 +1,21 @@
+l
+save history filename history.txt
+save History filename history.txt
+set history filename history.txt
+set history save on
+set listsize 18
+l
+set listsize 27
+l
+set listsize 23
+l
+set listsize 22
+l
+set listsize 21
+l
+start
+l
+n
+n
+n
+q
